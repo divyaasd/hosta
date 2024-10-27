@@ -9,7 +9,7 @@ app.use(express.json())
 
 app.use(cors())
 
-mongoose.connect('mongodb://localhost:27017/hosta')
+mongoose.connect('mongodb+srv://divyaas340:9HUarAV8IMS4JsYP@cluster0.u8iw1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
 app.post('/register',(req,res)=>{
     empModel.create(req.body)
