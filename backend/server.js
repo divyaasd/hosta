@@ -7,7 +7,13 @@ const app=express()
 
 app.use(express.json())
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: 'new-repo-host-uk4h.vercel.app', // Replace with your React app's Vercel URL
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],         
+        credentials: true                                  
+      }
+))
 
 mongoose.connect('mongodb+srv://divyaas340:9HUarAV8IMS4JsYP@cluster0.u8iw1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
